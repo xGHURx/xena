@@ -3,22 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basit Site</title>
+    <title>Xena</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
         body {
             background-color: black;
-            color: white;
+            color: gray;
+            font-family: 'EB Garamond', serif;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
             height: 100vh;
-            margin: 0;
+            text-align: center;
+        }
+
+        #message {
             font-size: 2rem;
-            font-family: Arial, sans-serif;
+            opacity: 0;
+            transition: opacity 2s;
+        }
+
+        .buttons {
+            margin-top: 20px;
+            display: none;
+        }
+
+        button {
+            background-color: transparent;
+            border: 1px solid gray;
+            color: gray;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            font-family: 'EB Garamond', serif;
+            margin: 5px;
+        }
+
+        button:hover {
+            background-color: gray;
+            color: black;
         }
     </style>
 </head>
 <body>
-    Merhaba
+    <div id="message">Merhaba</div>
+    <div class="buttons">
+        <button onclick="alert('Bilinmeyene adım attın!')">???</button>
+        <button onclick="alert('Selam!')">Merhaba</button>
+    </div>
+    
+    <script>
+        setTimeout(() => {
+            document.getElementById("message").style.opacity = "1";
+            setTimeout(() => {
+                document.querySelector(".buttons").style.display = "block";
+            }, 2000);
+        }, 3000);
+    </script>
 </body>
 </html>

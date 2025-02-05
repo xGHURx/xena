@@ -3,67 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gizemli Oyun</title>
+    <title>Video Sayfası</title>
     <style>
-        @font-face {
-            font-family: 'EskiFont';
-            src: local('Times New Roman');
-        }
-
         body {
             background-color: black;
-            color: gray;
-            font-family: 'EskiFont', serif;
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             height: 100vh;
-            text-align: center;
+            margin: 0;
         }
-
-        #message {
-            font-size: 2rem;
-            opacity: 0;
-            transition: opacity 2s;
-        }
-
-        .buttons {
-            margin-top: 20px;
-            display: none;
-        }
-
-        button {
-            background-color: transparent;
-            border: 1px solid gray;
-            color: gray;
-            padding: 10px 20px;
-            font-size: 1.2rem;
-            cursor: pointer;
-            font-family: 'EskiFont', serif;
-            margin: 5px;
-        }
-
-        button:hover {
-            background-color: gray;
-            color: black;
+        iframe {
+            width: 80%;
+            height: 80%;
+            max-width: 800px;
+            max-height: 450px;
         }
     </style>
 </head>
 <body>
-    <div id="message">Merhaba</div>
-    <div class="buttons">
-        <button onclick="alert('Bilinmeyene adım attın!')">???</button>
-        <button onclick="alert('Selam!')">Merhaba</button>
-    </div>
-    
-    <script>
-        setTimeout(() => {
-            document.getElementById("message").style.opacity = "1";
-            setTimeout(() => {
-                document.querySelector(".buttons").style.display = "block";
-            }, 2000);
-        }, 3000);
-    </script>
+    <iframe 
+        src="https://www.youtube.com/embed/gsNDgJdk_Fk" 
+        frameborder="0" 
+        allowfullscreen>
+    </iframe>
 </body>
 </html>
